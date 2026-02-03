@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int maxSubarraySum(int arr[], int n) {
+    int w = 3;
+    int ws = 0;
+    for (int i = 0; i < w; i++) {
+        ws += arr[i];
+    }
+    int mx = ws;
+
+    for (int i = w; i < n; i++) {
+        ws = ws - arr[i - w] + arr[i];
+        mx = max(mx, ws);
+    }
+    return mx;
+}
+int main() {
+    int arr[5] = {2, 5, 4, 6, 7};
+    int result = maxSubarraySum(arr, 5);
+
+    cout << result;
+    return 0;
+}
