@@ -108,7 +108,7 @@ int main() {
  
     for(i=1;i<=n;i++){
     for(k=1; k<=i;k++){
-                cout<<" ";
+        cout<<" ";
             }
           
         
@@ -117,6 +117,41 @@ int main() {
         }
         
          for(j=2; j>=i; j--){
+         cout<<"* ";
+        }
+        
+        cout<<endl;
+    }
+    return 0;
+}
+
+ * * * * * 
+  * * * * 
+   * * * 
+    * * 
+     * 
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i,j,k;
+   int n=5;
+ 
+    for(i=1;i<=n;i++){
+    for(k=1; k<=i;k++){
+                cout<<" ";
+            }
+          
+        
+        for(j=i; j<=n; j++){
+         cout<<"* ";
+        }
+        
+         for(j=0; j>=i; j--){
          cout<<"* ";
         }
         
